@@ -132,7 +132,7 @@ Shader "Sprites/EmindeShader2"
             {
             
                 float2 uv = IN.texcoord;
-                uv.x += sin(_Time.y * uv.y / 5) / 20;
+                uv.x += sin(_Time.y + _Time.y * uv.y / 5) / 18;
                 fixed4 c = SampleSpriteTexture (uv) * IN.color;
                 c *= _EmineTint;
                 
